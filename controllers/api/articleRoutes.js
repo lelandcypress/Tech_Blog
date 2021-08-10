@@ -2,29 +2,7 @@ const router = require("express").Router();
 const { Article, User, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.get("/:id", async (req, res) => {
-  try {
-    const articleData = await Article.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-        {
-          model: Comment,
-          attributes: ["content"],
-        },
-      ],
-    });
 
-    res.render("article", {
-      articles,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 router.post("/", withAuth, async (req, res) => {
   try {
