@@ -14,4 +14,12 @@ User.hasMany(Article, {
   foreignKey: "user_id",
 });
 
+Article.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+Comment.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
 module.exports = { User, Article, Comment };

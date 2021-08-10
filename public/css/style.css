@@ -1,0 +1,22 @@
+body {
+  background: linear-gradient(0.45turn, #1f2447, #1ea9cc);
+}
+header,
+.project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #222222;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #30d3d3;
+  text-decoration: underline;
+}
