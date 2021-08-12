@@ -24,7 +24,7 @@ Sign up, log in, and post away.
 
 ## License
 
-MIT ![MIT](./assets/MIT.svg)
+MIT 
 
 ## Contribution
 
