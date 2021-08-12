@@ -3,8 +3,21 @@
     
     <p>{{content}}</p>
     <p>Created by {{user.name}} on {{format_date date_created}}</p>
+   {{#if comments.length}}
+   {{#each comments as |comment|}}
     <div>comments</div>
-    <p></p>
+    <p>{{comment.content}}</p>
+    {{/each}}
+    {{/if}}
+<form class="new-comment-form">
+    <div class="form-group">
+        <label for="new-comment">comment</label>
+        <input class="form-input" type="text" id="new-comment" name="new-comment" />
+    </div>
+
         <button class="btn btn-primary">add comment</button>
-    </p>
+</form>
 </div> 
+
+
+<script src="../public/js/articleview.js"></script>
