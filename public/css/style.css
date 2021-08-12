@@ -11,12 +11,19 @@ header,
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #222222;
+  color: #0b87fb;
   text-decoration: none;
-  font-size: 100%;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .no-button:hover {
   color: #30d3d3;
   text-decoration: underline;
+}
+#title {
+  color: #0b87fb;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }

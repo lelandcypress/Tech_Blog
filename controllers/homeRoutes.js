@@ -14,7 +14,6 @@ router.get("/", async (req, res) => {
     });
     const articles = articleData.map((article) => article.get({ plain: true }));
     // Pass serialized data and session flag into template
-    console.log(articles);
     res.render("homepage", {
       articles,
       logged_in: req.session.logged_in,
@@ -40,11 +39,14 @@ router.get("/article/:id", async (req, res) => {
     });
 
     const article = articleData.get({ plain: true });
-
-    res.render("article", {
+    res.status(200).render("article", {
       ...article,
       logged_in: req.session.logged_in,
     });
+
+    console.log(article);
+
+    console.log(article.comments[0].content);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -59,7 +61,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
+    console.log("user");
     res.render("dashboard", {
       ...user,
       logged_in: true,
