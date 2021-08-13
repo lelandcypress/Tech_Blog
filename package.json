@@ -30,6 +30,9 @@
     "path": "^0.12.7",
     "sequelize": "^6.6.5"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "devDependencies": {},
-  "description": ""
+  "description": "1. [Description](#Description)\r 2. [Installation](#Instructions)\r 3. [Usage](#Usage)\r 4. [License](#License)\r 5. [Contribution](#Contribution)\r 6. [Tests](#Tests)\r 7. [Questions](#Questions)"
 }
