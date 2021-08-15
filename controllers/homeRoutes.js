@@ -33,6 +33,7 @@ router.get("/article/:id", async (req, res) => {
         },
         {
           model: Comment,
+          required: false,
         },
       ],
     });
