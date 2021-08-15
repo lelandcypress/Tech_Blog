@@ -37,10 +37,30 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const delCommentHandler = async (event) => {
+  if (event.target.hasAttribute("data-id")) {
+    const id = event.target.getAttribute("data-id");
+
+    const response = await fetch(`/api/comment/${id}`, {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      document.location.replace("/dashboard");
+    } else {
+      alert("Failed to delete comment");
+    }
+  }
+};
+
 document
   .querySelector(".new-article-form")
   .addEventListener("submit", newFormHandler);
 
 document
-  .querySelector(".article-list")
+  .querySelector("#articleDelete")
   .addEventListener("click", delButtonHandler);
+
+document
+  .querySelector("#commentDelete")
+  .addEventListener("click", delCommentHandler);

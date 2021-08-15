@@ -33,13 +33,35 @@
             <div class="col-md-8">
                 <h4><a href="/article/{{article.id}}">{{article.title}}</a></h4>
             </div>
+     
             <div class="col-md-4">
-                <button class="btn btn-sm btn-danger" data-id="{{article.id}}">DELETE</button>
+                <button id ="articleDelete" class="btn btn-sm btn-danger" data-id="{{article.id}}">DELETE</button>
+                <button id ="articleEdit" class="btn btn-sm btn-warning" data-id="{{article.id}}">EDIT</button>
             </div>
         </div>
         {{/each}}
     </div>
     {{/if}}
+</div>
+
+
+{{#if comments.length}}
+<div class="col-md-6 article-list">
+    <h3>Your Comments:</h3>
+
+    {{#each comments as |comment|}}
+    <div class="row mb-2">
+        <div class="col-md-8">
+            <h4><a href="/article/{{article.id}}">{{comment.content}}</a></h4>
+        </div>
+        <div class="col-md-4">
+            <button id = "commentDelete" class="btn btn-sm btn-danger" data-id="{{comment.id}}">DELETE</button>
+            <button  id = "commentEdit" class="btn btn-sm btn-warning" data-id="{{comment.id}}">EDIT</button>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
 </div>
 
 <script src="./js/dashboard.js"></script>
