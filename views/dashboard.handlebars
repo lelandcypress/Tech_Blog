@@ -36,14 +36,32 @@
      
             <div class="col-md-4">
                 <button id ="articleDelete" class="btn btn-sm btn-danger" data-id="{{article.id}}">DELETE</button>
-                <button id ="articleEdit" class="btn btn-sm btn-warning" data-id="{{article.id}}">EDIT</button>
+                <button type = "submit" id ="articleEdit" class="btn btn-sm btn-warning" data-id="{{article.id}}" data-toggle="modal" data-target="#aricleModal">EDIT</button>
             </div>
         </div>
+
+        <!-- Article Modal -->
+        <div id="articleModal" class="modal">
+        
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Article</h2>
+        
+                <form>
+                    <label for="editArtTitle">Title</label><br>
+                    <textarea type="textarea" id="editArtTitle" name="editArtTitle" >{{article.title}}</textarea>
+                    <br>
+                    <label for="editArtCont">Content</label><br>
+                    <textarea type="textarea" id="editArtCont" name="editArtCont">{{article.content}}</textarea>
+                    <input id ="articlePost" type="submit" value="Submit" data-id="{{article.id}}" >
+                </form>
+            </div>
+
         {{/each}}
     </div>
     {{/if}}
 </div>
-
 
 {{#if comments.length}}
 <div class="col-md-6 article-list">
@@ -55,13 +73,16 @@
             <h4><a href="/article/{{article.id}}">{{comment.content}}</a></h4>
         </div>
         <div class="col-md-4">
-            <button id = "commentDelete" class="btn btn-sm btn-danger" data-id="{{comment.id}}">DELETE</button>
-            <button  id = "commentEdit" class="btn btn-sm btn-warning" data-id="{{comment.id}}">EDIT</button>
+            <button id = "commentDelete" class="btn btn-sm btn-danger" data-id="{{comment.id}}">DELETE</button>       
         </div>
     </div>
     {{/each}}
 </div>
 {{/if}}
 </div>
+
+
+
+
 
 <script src="./js/dashboard.js"></script>
