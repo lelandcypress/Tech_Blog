@@ -50,10 +50,11 @@
         
                 <form>
                     <label for="editArtTitle">Title</label><br>
-                    <textarea type="textarea" id="editArtTitle" name="editArtTitle" >{{article.title}}</textarea>
+                    <textarea type="textarea" cols="60" rows= "3" id="editArtTitle" name="editArtTitle" >{{article.title}}</textarea>
                     <br>
                     <label for="editArtCont">Content</label><br>
-                    <textarea type="textarea" id="editArtCont" name="editArtCont">{{article.content}}</textarea>
+                    <textarea type="textarea" cols= "60" rows="10" id="editArtCont" name="editArtCont">{{article.content}}</textarea>
+                    <br>
                     <input id ="articlePost" type="submit" value="Submit" data-id="{{article.id}}" >
                 </form>
             </div>
