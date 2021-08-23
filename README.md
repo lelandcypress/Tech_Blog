@@ -12,7 +12,7 @@
 
 ## Description
 
-A fun place for creative programmers to come together and discuss/debate.
+A fun place for creative programmers to come together and discuss/debate. This app combines Javasript, Node, Express, and Sequalize to bring the best open forum for tech discussions.
 
 ## Installation
 
@@ -26,7 +26,7 @@ URL: https://hidden-beyond-98292.herokuapp.com/
 
 ## License
 
-MIT 
+![MIT License](https://img.shields.io/badge/License-MIT-brightgreen)
 
 ## Contribution
 
@@ -38,4 +38,4 @@ Make sure you have a good spell checker. Typos will result in laughter.
 
 ## Notes
 
-Comment functionality is still under development as of this writing.
+The ability to edit comments is still under development. 
